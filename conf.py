@@ -50,7 +50,8 @@ exclude_patterns = []
 #html_theme = 'alabaster'
 #html_theme = 'nervproject'
 #html_theme = 'press'
-html_theme = 'flask'
+#html_theme = 'flask'
+html_theme = 'agogo'
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
