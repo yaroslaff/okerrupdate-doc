@@ -1,7 +1,5 @@
 # Basic okerrmod modules
 
-[[_TOC_]]
-
 These modules are included in okerrmod package right from install. But it's always possible to extend it with other modules or write your own module. All basic modules are open-source and written in Python, so you can easily adopt it for your needs or use as example for your module.
 
 ## backups
