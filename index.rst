@@ -21,6 +21,10 @@ okerrupdate documentation
     checks/ok 
 
 
+Okerrupdate is client-side library and utilities to work with `okerr <https://github.com/yaroslaff/okerr-dev>`_ monitoring.
+You need it if you want to monitor your server 'from inside' (e.g. watch free disk space, load average, CPU temperature 
+and number of customers/purchases in web application database).
+
 ------------
 Installation
 ------------
