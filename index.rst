@@ -20,6 +20,23 @@ okerrupdate documentation
     checks/sql
     checks/ok 
 
+
+------------
+Installation
+------------
+Install as python package (recommended way for all users):
+
+.. code-block:: shell
+
+    pip3 install okerrupdate
+
+Or clone source code from `okerrupdate repository <https://github.com/yaroslaff/okerrupdate>`_ (for developers):
+
+.. code-block:: shell
+
+    git clone https://github.com/yaroslaff/okerrupdate.git
+
+
 -----------
 okerrupdate 
 -----------
