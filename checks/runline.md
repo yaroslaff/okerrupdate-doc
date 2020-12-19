@@ -5,6 +5,9 @@ Checks all environment (configuration) variables ending with _RUN and process ea
 if *name*_GREP variable is used, output will be 'grepped' and only lines which matches grep regex will be left.
 if *name*_LINE variabe is used (default 0), this line number is used. Lines are numbered from 0.
 if *name*_CASE is 1 - grep will be case-sensitive, if 0 - case-insensitive.
+if *name*_CM exists, it specifies check method. Default value is 'string', but you may want to use 'numerical'.
+if *name*_CMARGS exists, it specifies arguments for checkmethods. Arguments are separated by `|` sign. If checkmethod is string (default), default values for arguments are `options=reinit dynamic`, otherwise it's empty. 
+
 
 If indicator is created, it will use method string with options 'reinit' and 'dynamic' (as dynamic, it will never switch status to ERR status, but will send alert always when string changed).
 
@@ -41,6 +44,23 @@ sensors_RUN="pidof sensor.process|wc -w"
 # Good, working
 sensors_RUN="/bin/sh -c 'pidof sensor.process|wc -w'"
 ~~~
+
+## Practical examples
+Examples below reports number, so you will need to modify indicator in okerr (switch type from 'string' to 'numerical') after it will be created.
+
+Report total used RAM
+~~~
+used_RUN=/bin/sh -c 'free --mega|grep Mem:|tr -s " "|cut -f 3 -d " "'
+usedmem_CM=numerical
+usedmem_CMARGS=minlim=0|maxlim=10000
+~~~
+
+Report memory used by particular systemd service
+~~~
+mysql_used_RUN=/bin/sh -c 'systemctl status mariadb | grep Memory| tr -cd "[:digit:]."'
+mysql_used_CM=numerical
+~~~
+
 
 ## Using runline as proxy
 You can write simple monitoring programs to be used with runline. Program exit code will be ignored, and (to be used easier) it should output just one line of result in stdout.
