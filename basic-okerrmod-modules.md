@@ -13,6 +13,9 @@ Nice trick: if you store many backups in one directory, you dont have to any spe
 
 Also, indicators will send alert if `diffmin` restriction violated. For example, if diffmin=0 and old value was 100 and new is 99, this will trigger error. Usually for backups this makes sens (they should grow in size), but gzipped files could be little shorter, so backup uses relative 'DIFFMIN=-10%' restriction. It will alert if new size is less then old size -10%.
 
+When backup is in-progess (e.g. gzipping or copying from remote machine), wrong file size could be reported and this could lead to false positive if indicator uses `minlim` or `diffmin` options. To avoid such problem, option
+`COMPLETED` (default: 1min) specified which files are ignored. File will not be reported (not considered as completed) if it's age (mtime) is smaller then this value.
+
 ## client_ip
 Detect and report server external IP address
 
