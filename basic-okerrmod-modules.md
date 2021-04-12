@@ -113,6 +113,17 @@ Run program and report exit code. (This is simpler then [runline](checks/runline
 
 See detailed documentation page for [runstatus](checks/runstatus) module.
 
+## runtime
+Run program and report time. example:
+~~~
+sleep_TIME=/usr/bin/sleep 2
+~~~
+will create numerical indicator PREFIX:sleep with value about 2.0032
+
+Optional `FRACTION` variable sets how many numbers after period to report. Default value is 4.
+
+If program exits with non-zero status, indicator will have value -1.
+
 ## SQL
 [sql](checks/sql) - perform Mariadb/MySQL numeric SQL query
 
