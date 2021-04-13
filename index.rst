@@ -53,9 +53,9 @@ okerrupdate
 okerrmod
 --------
 
-Okerrmod is utility to work with okerr check module
+Okerrmod is utility to work with okerr check modules.
 
-Check module (or simple check or module) is small program that checks one parameter of system, such as CPU temperature, free space on partition, is apache running or not and similar thing.
+Check module (or simple 'check' or 'module') is small program that checks one parameter of system, such as CPU temperature, free space on partition, is apache running or not and similar things.
 
 :doc:`okerrmod-usage`
 
