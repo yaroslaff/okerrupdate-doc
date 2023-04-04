@@ -1,6 +1,5 @@
-=========================
 okerrupdate documentation
-=========================
+#########################
 
 
 .. toctree::
@@ -25,9 +24,10 @@ Okerrupdate is client-side library and utilities to work with `okerr <https://gi
 You need it if you want to monitor your server 'from inside' (e.g. watch free disk space, load average, CPU temperature 
 and number of customers/purchases in web application database).
 
-------------
+
 Installation
-------------
+************
+
 Install as python package (recommended way for all users):
 
 .. code-block:: shell
@@ -41,17 +41,21 @@ Or clone source code from `okerrupdate repository <https://github.com/yaroslaff/
     git clone https://github.com/yaroslaff/okerrupdate.git
 
 
------------
+Configuration
+*************
+
+:doc:`configuration`
+
 okerrupdate 
------------
+***********
 
 :doc:`okerrupdate-utility`
 
 :doc:`okerrupdate-module`
 
---------
+
 okerrmod
---------
+********
 
 Okerrmod is utility to work with okerr check modules.
 
@@ -59,16 +63,17 @@ Check module (or simple 'check' or 'module') is small program that checks one pa
 
 :doc:`okerrmod-usage`
 
-----------------
+
 Okerrmod modules
-----------------
+****************
+
 :doc:`common-modules-properties`
 
 :doc:`basic-okerrmod-modules`
 
-------------------
+
 Extending okerrmod
-------------------
+******************
 
 :doc:`Using virtual modules <Virtual-modules>`
 
@@ -76,9 +81,15 @@ Extending okerrmod
 
 :doc:`Writing-custom-okerrmod-modules`
 
----------------
+
+okerrapi
+********
+
+:doc:`okerrapi`
+
+
 Tips and tricks
----------------
+****************
 :doc:`Running-checks-with-different-periods`
 
 :doc:`manual-run`
