@@ -18,6 +18,8 @@ okerrupdate documentation
     manual-run
     checks/sql
     checks/ok 
+    okerrapi
+    configuration
 
 
 Okerrupdate is client-side library and utilities to work with `okerr <https://github.com/yaroslaff/okerr-dev>`_ monitoring.
